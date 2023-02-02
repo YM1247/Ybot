@@ -1,9 +1,9 @@
 import discord
 from discord.ext import commands
 from discord.ui import Button, View
-from core.classes import cogExtension
+from core.classes import CogExtension
 
-class manga(cogExtension):
+class Manga(CogExtension):
     @commands.slash_command(name = 'cum', description = '輸入番號，然後瘋狂射精!')
     async def cum(self, ctx, code):
         url = f'https://nhentai.net/g/{code}'
@@ -12,4 +12,4 @@ class manga(cogExtension):
         await ctx.respond(view = view)
 
 def setup(bot):
-    bot.add_cog(manga(bot))
+    bot.add_cog(Manga(bot))

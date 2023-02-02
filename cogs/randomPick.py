@@ -1,9 +1,9 @@
 import discord
 from discord.ext import commands
 import random
-from core.classes import cogExtension
+from core.classes import CogExtension
 
-class randomPick(cogExtension):
+class RandomPick(CogExtension):
     @commands.slash_command(name = '隨機數字', description = '隨機取值')
     async def randomNum(self, ctx, start: discord.Option(int), end: discord.Option(int)):
         ram = random.randint(int(start), int(end))
@@ -23,4 +23,4 @@ class randomPick(cogExtension):
         await ctx.respond(f'{顆數}d{面數}:{result} => {sum(result)}')
 
 def setup(bot):
-    bot.add_cog(randomPick(bot))
+    bot.add_cog(RandomPick(bot))

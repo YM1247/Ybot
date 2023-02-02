@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
 
-class cogExtension(commands.Cog):
+class CogExtension(commands.Cog):
     def __init__(self, bot):
         self.bot = bot

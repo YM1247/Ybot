@@ -1,8 +1,8 @@
 import discord
 from discord.ext import commands
-from core.classes import cogExtension
+from core.classes import CogExtension
 
-class about(cogExtension):
+class About(CogExtension):
     @commands.slash_command(name = 'about', description = 'about Ybot')
     async def about(self, ctx):
         embed = discord.Embed(
@@ -26,4 +26,4 @@ class about(cogExtension):
         await ctx.respond(embed = embed)
 
 def setup(bot):
-    bot.add_cog(about(bot))
+    bot.add_cog(About(bot))
