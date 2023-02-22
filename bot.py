@@ -15,4 +15,4 @@ for cog in os.listdir('./cogs'):
         bot.load_extension(f'cogs.{cog[:-3]}')
 
 if __name__ == '__main__':
-    bot.run(os.getenv('TOKEN')) 
+    bot.run(os.getenv('TOKEN'))

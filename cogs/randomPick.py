@@ -10,7 +10,7 @@ class RandomPick(CogExtension):
         await ctx.respond(f'隨機數字{start} ~ {end} => {ram}')
 
     @commands.slash_command(name = '隨機', description = '從輸入中隨機取值')
-    async def random(self, ctx, input):
+    async def random(self, ctx, input: discord.Option(str, name = '隨機清單', description= '從輸入清單中隨機回傳結果')):
         mes = input.split(' ')
         ram = random.randint(0, len(mes)-1)
         await ctx.respond(f'隨機{mes} => {mes[ram]}')
