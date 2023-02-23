@@ -16,4 +16,4 @@ for cog in os.listdir('./cogs'):
         print(f'已加載{cog}')
 
 if __name__ == '__main__':
-    bot.run(os.getenv('TOKEN')) 
+    bot.run(os.getenv('TOKEN'))
