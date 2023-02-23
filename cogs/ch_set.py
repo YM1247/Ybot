@@ -14,7 +14,7 @@ class ChSet(CogExtension):
             name : discord.PermissionOverwrite(manage_channels = True)
         }
 
-        async def button_callback():
+        async def button_callback(ctx):
             ch = await guild.create_text_channel(
                 name = f'{str(name)[:-5]}的個人頻道',
                 category = category,
@@ -22,7 +22,7 @@ class ChSet(CogExtension):
                 )
             close_button = Button(label= '點我關閉此頻道', style = discord.ButtonStyle.red)
             
-            async def close_button_callback():
+            async def close_button_callback(ctx):
                 await ch.delete()
             
             close_button.callback = close_button_callback
