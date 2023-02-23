@@ -13,6 +13,7 @@ async def on_ready():
 for cog in os.listdir('./cogs'):
     if cog.endswith('.py'):
         bot.load_extension(f'cogs.{cog[:-3]}')
+        print(f'已加載{cog}')
 
 if __name__ == '__main__':
     bot.run(os.getenv('TOKEN')) 
